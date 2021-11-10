@@ -14,7 +14,8 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->text(30),
+            'image' => $this->faker->imageUrl()
         ];
     }
 }
