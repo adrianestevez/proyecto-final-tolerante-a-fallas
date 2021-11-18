@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProductCreated;
+use App\Jobs\ProductDeleted;
+use App\Jobs\ProductUpdated;
 use App\Models\Product;
 use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
@@ -22,6 +25,8 @@ class ProductController extends Controller
     {
         $product = Product::create($request->only('title','image'));
 
+        ProductCreated::dispatch($product->toArray());
+
         return response($product, 201);
     }
 
@@ -31,12 +36,16 @@ class ProductController extends Controller
 
         $product->update($request->only('title','image'));
 
+        ProductUpdated::dispatch($product->toArray());
+
         return response($product, 201);
     }
 
     public function destroy($id)
     {
         Product::destroy($id);
+
+        ProductDeleted::dispatch($id);
 
         return response(null, 204);
     }
