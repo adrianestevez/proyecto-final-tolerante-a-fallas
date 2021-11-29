@@ -1,3 +1,5 @@
+import { ProductEditComponent } from './admin/product-edit/product-edit.component';
+import { ProductCreateComponent } from './admin/product-create/product-create.component';
 import { ProdutsComponent } from './admin/produts/produts.component';
 import { AdminComponent } from './admin/admin.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +12,8 @@ const routes: Routes = [
   component: AdminComponent,
   children: [
     {path: 'products', component:ProdutsComponent},
+    {path: 'products/create', component:ProductCreateComponent},
+    {path: 'products/:id/edit', component:ProductEditComponent},
   ]
   },
 ];

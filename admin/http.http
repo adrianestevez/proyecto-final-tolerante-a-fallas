@@ -1,8 +1,8 @@
-POST http:/localhost:8000/api/products
+POST http://localhost:8000/api/products
 Accept: application/json
 Content-Type: application/json
 
 {
-    "title" : "t",
-    "image" : "i",
+    "title" : "prueba",
+    "image" : "https://ichef.bbci.co.uk/news/800/cpsprodpb/15665/production/_107435678_perro1.jpg"
 }

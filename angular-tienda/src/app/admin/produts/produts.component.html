@@ -1,21 +1,36 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+  <div class="btn btn-sm btn-toolbar mb-md-0">
+    <a class="btn btn-outline-secondary" routerLink="/admin/products/create">Agregar</a>
+  </div>
+</div>
+
 <div class="table-responsive">
   <table class="table table-striped table-sm">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Header</th>
-        <th scope="col">Header</th>
-        <th scope="col">Header</th>
-        <th scope="col">Header</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Likes</th>
+        <th scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1,001</td>
-        <td>random</td>
-        <td>data</td>
-        <td>placeholder</td>
-        <td>text</td>
+      <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td><img src="{{product.image}}" width="150" height="80"></td>
+        <td>{{product.title}}</td>
+        <td>{{product.likes}}</td>
+        <td>
+          <div class="btn btn-group mr-2">
+            <a href="javascript:void(0)" class="btn btn-sm btn-outline-secondary" (click)="delete(product.id)">
+              Borrar
+            </a>
+            <a [routerLink]="['/admin/products/',product.id,'edit']" class="btn btn-sm btn-outline-secondary">
+              Editar
+            </a>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
