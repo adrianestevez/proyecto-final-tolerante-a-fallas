@@ -16,3 +16,7 @@ En este proyecto hacemos una tienda con microservicios. Para el backend utilizam
 + RabbitMQ
 + Docker(docker-compose)
 
+## Link al video con la ejecucion
+
+***Favor de abrir con cuenta institucional**
+[Video de la ejecucion](https://drive.google.com/file/d/1lGgYN74BlMga_RG8gkMGQAZaAu3D126V/view?usp=sharing).
