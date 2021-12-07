@@ -19,4 +19,4 @@ En este proyecto hacemos una tienda con microservicios. Para el backend utilizam
 ## Link al video con la ejecucion
 
 ***Favor de abrir con cuenta institucional**
-[Video de la ejecucion](https://drive.google.com/file/d/1lGgYN74BlMga_RG8gkMGQAZaAu3D126V/view?usp=sharing).
+[Video de la ejecucion](https://drive.google.com/file/d/1Ifr2xfbmfaQGNC6kS4qniw2vRcMNScWK/view?usp=sharing).
